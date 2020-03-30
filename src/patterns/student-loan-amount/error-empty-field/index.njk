@@ -1,23 +1,27 @@
 ---
 layout: layout-example.njk
-title: Error, empty field – Student Loan amount
+title: Error empty – Student loan amount
 ---
 
 {% from "govuk/components/input/macro.njk" import govukInput %}
 
-{{ govukInput({
-  label: {
-    text: "Teacher Reference Number"
-  },
-  hint: {
-    html: "You can get this from your school, the certificate you got when you qualified as a teacher or from the <a href='https://www.gov.uk/guidance/individual-teacher-records-information-for-teachers#contact'  class='govuk-link'>teacher qualifications helpdesk</a>."
-  },
-  errorMessage: {
-    text: "Teacher reference number must contain seven digits"
-  },
-  id: "telephone-number",
-  name: "telephone-number",
-  type: "tel",
-  autocomplete: "tel",
-  classes: "govuk-input--width-20"
-}) }}
+<div class="govuk-form-group govuk-form-group--error">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--xl" for="student-loan-amount">
+      Exactly how much student loan did you repay while employed as a teacher between 6 April 2018 and 5 April 2019?
+    </label>
+  </h1>
+
+  <span id="changed-name-hint" class="govuk-hint">
+    Check your annual student loan statement, or your P60 if you had only one employer. You can also add up the student loan contributions from your payslips from this period, but bear in mind the amounts on each payslip might be different.
+  </span>
+
+  <span class="govuk-error-message">
+    <span class="govuk-visually-hidden">Gwall:</span> Enter a student loan amount
+  </span>
+
+  <div class="govuk-currency-input govuk-!-margin-bottom-7">
+    <span class="govuk-currency-input__unit">£</span>
+    <input class="govuk-currency-input__input govuk-input--width-5 govuk-input" step="any" min="0" max="99999" type="number" name="studnetLoanAmount" id="studnetLoanAmount">
+  </div>
+</div>
