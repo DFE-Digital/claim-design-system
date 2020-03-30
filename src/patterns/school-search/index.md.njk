@@ -1,12 +1,11 @@
 ---
-title: School taught at
+title: The school they are employed at
+
 description: Help users find a school in England
 section: Patterns
 theme: Ask users for…
 aliases: School Search, school, search
 layout: layout-pane.njk
-status: Experimental
-statusMessage: This pattern is currently experimental because <a class="govuk-link" href="#research-on-this-pattern">more research</a> is needed to validate it.
 ---
 
 {% from "_example.njk" import example %}
@@ -22,14 +21,14 @@ Use this pattern to help a user identify a school somewhere in England.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xnk4J9WhmB8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br/>
 
-Schools in England are maintained on the [Get information about schools](https://get-information-schools.service.gov.uk/) (GIAS)
-service. We use this data
-to make it easier for the user to find a school.
+Schools in England are maintained on the [Get information about schools](https://get-information-schools.service.gov.uk/)
+(GIAS) service. We use this data to make it easier for the user to find a school.
 
 When asking for a school
 
 - give multiple methods of finding a school
-- use [accessible autocomplete](https://github.com/alphagov/accessible-autocomplete) to help a user when typing long school names
+- use [accessible autocomplete](https://github.com/alphagov/accessible-autocomplete)
+to help a user when typing long school names
 - use up to date data from Get information about schools
 - display additional information to the user to help them identify the correct
 school (such as the address)
@@ -59,8 +58,14 @@ Say ‘No results match that search term. Try again.’
 ## Research on this pattern
 
 Research on this pattern is limited. We've done some testing which indicates it
-is usable and accessible, but we've also included an [option for users who are
-unable to use JavaScript](../school-search-non-js-fallback).
+is usable and accessible, but we've also included an option for users who are
+unable to use JavaScript.
+
+### Without javascript search results option
+
+When users are unable to use JavaScript search results should be styled like this:
+
+{{ example({group: "patterns", item: "school-search", example: "with-search-results", html: true, nunjucks: true, open: false, size: "xl"}) }}
 
 ### Employed to teach vs employed at
 
@@ -83,6 +88,7 @@ to show a user closed schools:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RSd-MzkPkuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br/>
+
 ### Problems finding the right school
 
 Some school names are more difficult to search for and identify.
@@ -99,5 +105,3 @@ as by address or postcode as well as name.
 
 You might also consider ignoring apostrophes and other punctuation in the
 search.
-
-
