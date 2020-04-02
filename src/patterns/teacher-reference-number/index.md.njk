@@ -23,23 +23,22 @@ they qualify. Schools often use this for employment purposes and for recording
 information with the Teacher Pension Service.
 
 Teacher reference numbers contain 7 digits and may also contain a hyphen, a
-forward slash, or the letters 'RP'.
+forward slash, or be preceeded by the letters <code>RP</code>.
 
 When asking for teacher reference number:
 
 - give advice about where the user can find their teacher reference number
-- allow the user to enter their reference in whichever format is familiar to them, for example with or without spaces, a slash, a hyphen, or the letters 'RP'
-- do not use the initialism 'TRN', which is commonly used within DfE
+- allow the user to enter their reference in whichever format is familiar to
+them, for example with or without spaces, a slash, a hyphen, or the letters
+<code>RP</code>
+- do not use the initialism 'TRN', which is commonly used within DfE, instead
+say <code>Teacher reference number</code>
 
 ### Error messages
 
 Error messages should be styled like this:
 
 {{ example({group: "patterns", item: "teacher-reference-number", example: "error-empty-field", html: true, nunjucks: true, open: false, size: "s"}) }}
-
-Make sure errors follow the guidance in the GDS
-[error message component](https://design-system.service.gov.uk/components/error-message/)
-and have specific error messages for specific error states.
 
 #### If the input is empty
 
@@ -53,7 +52,7 @@ Say ‘Teacher reference number must contain seven digits’.
 
 Avoid [input masking](https://css-tricks.com/input-masking/) because it makes it harder for users to:
 
-- type a number in their preferred way
+- enter their teacher reference number in their preferred way
 - transcribe a number from another place and check that they’ve got it right
 
 ### Avoid asking where possible
@@ -64,6 +63,8 @@ the user has easier access to.
 While some teachers memorise the number, most teachers will not have this to
 hand. Users will often check their teaching qualification certificate, ask their
 school, or check a recent job application.
+
+## Research on this component
 
 ### Teachers often get this wrong
 
@@ -82,3 +83,8 @@ Some teachers who re-qualify also end up with multiple reference numbers. While
 the Database of Qualified Teachers should accommodate for this and assign new
 qualifications to existing records, we have observed instances where mistakes
 have been made.
+
+### They are not always unique
+
+It is possible to search the Database of Qualified Teachers for a teacher
+reference number and to get more than one person returned in the results.
