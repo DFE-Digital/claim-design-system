@@ -3,8 +3,7 @@ title: Subjects taught
 description: Ask users to select from a list of subjects or choose none
 section: Patterns
 theme: Ask users for…
-aliases: radio buttons, option buttons, ITT
-backlog_issue_id: 59
+aliases: subjects taught, subjects, what do you teach
 layout: layout-pane.njk
 ---
 
@@ -14,16 +13,33 @@ layout: layout-pane.njk
 
 ## When to use this pattern
 
+Use this pattern when a teacher is eligible for your service if they teach
+one or more of a small selection of subjects.
+
 ## When not to use this pattern
+
+Do not use this pattern when you need to ask a teacher what subjects they teach
+from a large selection of subjects. Instead consider alternative methods such
+as a [search option]{https://github.com/alphagov/govuk-design-system-backlog/issues/88}
+or [text input](https://design-system.service.gov.uk/components/text-input/).
+
+## How it works
+
+This is a unique pattern that requires the use of checkboxes, the or divider and
+a radio button in one question.
+
+- When a user selects one or more checkboxes, the radio button should be
+unselected.
+- When a user selects the radio button, all checkboxes should be unselected.
 
 ### Error messages
 
-Error messages should be styled like this:
-
 {{ example({group: "patterns", item: "which-subjects-do-you-teach", example: "error-none-selected", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-Make sure errors follow the guidance in the GDS
-[error message component](https://design-system.service.gov.uk/components/error-message/)
-and have specific error messages for specific error states.
+#### If the user does not select any languages
 
-## Research on this component
+Say ‘Select if you taught Biology, Chemistry, Physics, Computing, Languages or
+you didn’t teach any of these subjects’.
+
+If you have a longer list of languages you may want to say 'Select which subjects
+you teach or select you didn’t teach any of these subjects'
