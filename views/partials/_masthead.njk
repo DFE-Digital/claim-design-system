@@ -2,12 +2,25 @@
   <div class="app-width-container">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds-from-desktop">
-            <h1 class="govuk-heading-xl app-masthead__title">Design your service using GOV.UK styles, components and&nbsp;patterns</h1>
-            <p class="app-masthead__description">Use this design system to make your service consistent with GOV.UK. Learn from the research and experience of other service teams and avoid repeating work that’s already been done.</p>
+            <h1 class="govuk-heading-xl app-masthead__title">
+              Design your service using Claim additional payments for teaching patterns
+            </h1>
+            <span class="app-masthead__description">
+              <p>
+                Learn from our reserach and experience to avoid repeating work
+                that has already been done. Then <a class="govuk-link" href="https://github.com/DFE-Digital/claim-design-system">
+                feedback</a> to expland this design system.
+              </p>
+              <p>
+                Click on the patterns link to view our current patters, or click
+                the button below for help creating prototypes with the
+                GOV.UK Design system.
+              </p>
+            </span>
             {% from "govuk/components/button/macro.njk" import govukButton %}
             {{ govukButton({
-              "text": "Get started",
-              "href": "/get-started",
+              "text": "Get started prototyping",
+              "href": "https://design-system.service.gov.uk/get-started/prototyping/",
               "classes": "app-button--inverted govuk-!-margin-top-6 govuk-!-margin-bottom-0",
               "isStartButton": "true"
             }) }}

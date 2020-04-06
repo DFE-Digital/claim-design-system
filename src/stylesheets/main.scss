@@ -199,6 +199,10 @@ $colour-list-breakpoint: 980px;
   }
 }
 
+.app-masthead a.govuk-link{
+  color: govuk-colour("white");
+}
+
 .app-swatch {
   display: block;
   position: absolute;
