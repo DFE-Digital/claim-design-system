@@ -3,61 +3,53 @@ title: Error, none selected – Which of the following subjects did you teach at
 layout: layout-example.njk
 ---
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+<div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" id="claim_subjects_taught">
 
-{{ govukCheckboxes({
-  idPrefix: "subjectsTaught",
-  name: "subjectsTaught",
-  fieldset: {
-    legend: {
-      text: "Which subjects do you teach?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--xl"
-    }
-  },
-  errorMessage: {
-    text: "Which subjects do you teach?"
-  },
-  items: [
-    {
-      value: "Biology",
-      text: "Biology"
-    },
-    {
-      value: "Chemistry",
-      text: "Chemistry"
-    },
-    {
-      value: "Physics",
-      text: "Physics"
-    },
-    {
-      value: "Computing",
-      text: "Computing"
-    },
-    {
-      value: "Languages",
-      text: "Languages"
-    }
-  ]
-}) }}
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h1 class="govuk-fieldset__heading">
+        Which of the following subjects did you teach at Penistone Grammar School between 6 April 2018 and 5 April 2019?
+      </h1>
+    </legend>
 
-{{ govukRadios({
-  idPrefix: "subjectsTaught",
-  name: "subjectsTaught",
-  items: [
-    {
-      divider: "or"
-    },
-    {
-      value: "I did not teach any of these subjects",
-      text: "I did not teach any of these subjects"
-    }
-  ]
-}) }}
+    <span class="govuk-error-message" id="student_loans_eligibility_subjects_taught-error">
+      <span class="govuk-visually-hidden">Error:</span> Select if you taught Biology, Chemistry, Physics, Computing,
+      Languages or you did not teach any of these subjects</span>
+      <div class="govuk-checkboxes">
 
-{{ govukButton({
-  text: "Continue"
-}) }}
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input subject" id="biology_taught" type="checkbox" name="subjects_taught">
+          <label class="govuk-label govuk-checkboxes__label" for="biology_taught">Biology</label>
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input subject" id="chemistry_taught" type="checkbox" name="subjects_taught">
+          <label class="govuk-label govuk-checkboxes__label" for="chemistry_taught">Chemistry</label>
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input subject" id="physics_taught" type="checkbox" name="subjects_taught">
+          <label class="govuk-label govuk-checkboxes__label" for="physics_taught">Physics</label>
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input subject" id="computing_taught" type="checkbox" name="subjects_taught">
+          <label class="govuk-label govuk-checkboxes__label" for="computing_taught">Computing</label>
+        </div>
+
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input subject" id="languages_taught" type="checkbox" name="subjects_taught">
+          <label class="govuk-label govuk-checkboxes__label" for="languages_taught">Languages</label>
+        </div>
+
+        <div class="govuk-radios__divider">or</div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" type="radio" name="subjects_taught" id="none_taught">
+          <label class="govuk-label govuk-radios__label" for="none_taught">I did not teach any of these subjects</label>
+        </div>
+
+      </div>
+    </span>
+  </fieldset>
+</div>
