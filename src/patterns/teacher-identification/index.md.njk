@@ -1,0 +1,60 @@
+---
+title: Teacher identification
+description: Ask teachers to identify themselves
+section: Patterns
+theme: Pages
+aliases: trn, verify, identity
+layout: layout-pane.njk
+---
+
+{% from "_example.njk" import example %}
+
+{{ example({group: "patterns", item: "teacher-identification", example: "default", html: true, nunjucks: true, open: false}) }}
+
+## When to use this pattern
+
+Use this pattern when you need to confirm the identity of a teacher who is unable to use GOV.UK Verify and fails the verification process. The majority of claims through Claim additional payments for teaching successfully complete GOV.UK Verify.
+
+## When not to use this pattern
+
+Avoid using this pattern as an alternative to GOV.UK Verify. This pattern is for a small amount of users who are unable to confirm their identity. This pattern doesn't scale easily and requires manual work from an operator performing a phone call.
+
+## How it works
+
+Some teachers are unable to use GOV.UK Verify. This usually happens if the service the user selects (e.g Experian) is unable to verify the identity of a teacher. When the user fails to complete the verification process GOV.UK Verify displays a service specific page for alternative methods fo verify themselves.
+
+We display this content which links a user to complete their identity information seperately. The operations team then take this data and cross check it with internal DfE data.
+
+![A diagram of how the identity verification works when failing GOV.UK Verify](/images/teacher-identity.jpg "Teacher identification diagram")
+
+Pair this pattern with [Teacher Reference Number] to have the relevant data necessary to identify a teacher.
+
+## Confirming a teacher submitted the claim
+
+In addition to the checks we make on internal data held by the Database of Qualified Teachers and the Teacher Pension Scheme we also need to confirm the person who submitted the application is the person who works for the stated school. 
+
+We complete this check by scheduling a call at the teachers school to confirm their identity and confirm they work legitimately at the school they stated they work for in the application process.
+
+## Research on this pattern
+
+### Alternative services often work
+
+When a user fails using a service (e.g Experian) you should encourage them to complete the process using an alternative service (e.g Post office). While this is time consuming it is often quicker overall for everyone.
+
+### Teachers are very busy
+
+Speaking to a teacher on the phone at their school should be treated with patience. We schedule calls with the teacher via email at a convenient time.
+
+### Using this pattern can be time consuming
+
+While the phonecall itself only takes a couple of minutes on average it takes a lot of effort for both operators and teachers to plan and schedule a phone call.
+
+### Make it clear why you're calling
+
+We make it clear to the user that we're calling to check they have legitimately submitted a claim and that they work at the school they stated in their application.
+
+### You might not get through to the teacher immediately
+
+Plan for various people answering the call including headteachers, business professionals and even students.
+
+[Teacher Reference Number]: /patterns/teacher-reference-number

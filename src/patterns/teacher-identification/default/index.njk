@@ -1,0 +1,41 @@
+---
+layout: layout-example-full-page.njk
+title: Failed GOV.UK Verify
+---
+
+{% extends "example-wrappers/full-page.njk" %}
+{% set mainClasses = "govuk-main-wrapper--l" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Experian was unable to verify your identity</h1>
+        <p class="govuk-body">
+          You can still claim additional payments for teaching.
+        </p>
+        <h2 class="govuk-heading-l">Try verifying with another certified company</h2>
+        <p class="govuk-body">Other companies use different methods from Experian and may therefore stand a better chance of verifying your identity.</p>
+        <p class="govuk-body"><a class="govuk-link" href="https://www.signin.service.gov.uk/choose-a-certified-company">Find another company to verify you</a></p>
+        <h2 class="govuk-heading-m">View other ways to claim additional payments for teaching</h2>
+
+        <div class="govuk-body">
+          <p class="govuk-body">We may be able to confirm your identity by contacting you at your school. It will take longer to process your claim if we need to do this.</p>
+          <p class="govuk-body"><a class="govuk-link" href="https://www.claim-additional-teaching-payment.service.gov.uk/verify/authentications/skip">Continue claim and verify my identity later</a></p>
+        </div>
+
+        <h2 class="govuk-heading-m">Contact Experian</h2>
+
+        <div class="govuk-body">
+          <h3 class="heading-small">Experian helpline</h3>
+          <p>
+            Telephone: 0344 481 8192<br>
+            Monday to Friday, 8am to 10pm<br>
+            Saturday and Sunday, 8am to 5pm<br>
+            Closed on bank holidays
+          </p>
+        </div>
+        
+    </div>
+  </div>
+{% endblock %}
