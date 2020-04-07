@@ -13,33 +13,57 @@ layout: layout-pane.njk
 
 ## When to use this pattern
 
-Use this pattern when a teacher is eligible for your service if they teach
-one or more of a small selection of subjects.
+Use this pattern when a teacher is eligible for your service if they teach or
+taught one or more of a small selection of subjects.
 
 ## When not to use this pattern
 
-Do not use this pattern when you need to ask a teacher what subjects they teach
+Do not use this pattern when you need to ask a teacher which subjects they teach
 from a large selection of subjects. Instead consider alternative methods such
-as a [search option]{https://github.com/alphagov/govuk-design-system-backlog/issues/88}
+as a [search option](https://github.com/alphagov/govuk-design-system-backlog/issues/88)
 or [text input](https://design-system.service.gov.uk/components/text-input/).
 
 ## How it works
 
-This is a unique pattern that requires the use of checkboxes, the or divider and
-a radio button in one question.
+This is a unique pattern which combines the use of checkboxes with a single
+radio button separated by a [text divider](https://design-system.service.gov.uk/components/radios/#radio-items-with-a-text-divider).
 
-- When a user selects one or more checkboxes, the radio button should be
-unselected.
-- When a user selects the radio button, all checkboxes should be unselected.
+- When a user selects one or more checkboxes, the radio button is unselected.
+- When a user selects the radio button, all checkboxes are unselected.
+- Allow users to flag themselves as ineligible by selecting 'I did not teach
+  any of these subjects' then explain why on the 'ineligible screen'.
+
+### Asking within a limited timeframe
+
+It may be useful to ask this question in relation to a limited timeframe such as
+the last academic year. When doing this:
+
+- be clear about the timeframe in question and use the correct [date formats](https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#dates)
+- include any other information like the school name if you've already asked for this
+
+{{ example({group: "patterns", item: "which-subjects-do-you-teach", example: "asking-in-timeframe", html: true, nunjucks: true, open: false, size: "s"}) }}
 
 ### Error messages
 
 {{ example({group: "patterns", item: "which-subjects-do-you-teach", example: "error-none-selected", html: true, nunjucks: true, open: false, size: "s"}) }}
 
-#### If the user does not select any languages
+#### If the user does not select any subjects
 
 Say ‘Select if you taught Biology, Chemistry, Physics, Computing, Languages or
-you didn’t teach any of these subjects’.
+if you did not teach any of these subjects’.
 
-If you have a longer list of languages you may want to say 'Select which subjects
-you teach or select you didn’t teach any of these subjects'
+If you have a longer list of subjects you consider saying 'Select which subjects
+you taught or select that you did not teach any of these subjects'
+
+### Research on this component
+
+#### Teachers work in academic years
+
+If you need to ask which subjects a teacher taught during the tax year or any
+other timeframe, it may be more difficult for teachers to think about and answer
+correctly.
+
+Teachers who change jobs tend to do so between academic years or at the end of a
+term. Teachers are more likely to have worked at more than one school, held more
+than one position, or taught more than one subject in a tax year or any other
+given timeframe compared to a single academic year.
