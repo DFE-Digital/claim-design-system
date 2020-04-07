@@ -3,5 +3,9 @@
     "label": "Patterns",
     "url": "patterns",
     "includeInSearch": true
+  },
+  {
+    "label": "Content",
+    "url": "content"
   }
 ]
